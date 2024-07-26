@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdf-pigeon-deployment
+spec:
+  replicas: 2
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: pdf-pigeon
+  template:
+    metadata:
+      labels:
+        app: pdf-pigeon
+    spec:
+      containers:
+      - name: pdf-pigeon
+        image: hirebarend/pdf-pigeon:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /api/v1/ping
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /api/v1/health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        env:
+        - name: HOST
+          value: pdfpigeon.com
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pdf-pigeon-service
+spec:
+  selector:
+    app: pdf-pigeon
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

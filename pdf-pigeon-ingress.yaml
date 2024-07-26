@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pdf-pigeon-ingress
+spec:
+  tls:
+  - hosts:
+    - pdfpigeon.com
+    secretName: pdfpigeon-com-secret
+  rules:
+    - host: "pdfpigeon.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pdf-pigeon-service
+                port:
+                  number: 80
+  ingressClassName: nginx
+  
