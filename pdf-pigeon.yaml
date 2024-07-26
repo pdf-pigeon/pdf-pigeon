@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pdf-pigeon
-        image: hirebarend/pdf-pigeon:latest
+        image: ghcr.io/pdf-pigeon/pdf-pigeon:release
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
