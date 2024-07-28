@@ -20,7 +20,9 @@ export async function startServer() {
   await server.register(fastifySwagger, {
     swagger: {
       consumes: ['application/json'],
-      host: process.env.HOST || 'localhost:8080',
+      host: process.env.DEBUG
+        ? 'localhost:8080'
+        : process.env.HOST || 'pdfpigeon.com',
       info: {
         description: 'HTML to PDF in under 2 seconds',
         title: 'PDF Pigeon API Specification',
