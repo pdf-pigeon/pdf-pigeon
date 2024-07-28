@@ -28,6 +28,10 @@ export async function startServer() {
       },
       produces: ['application/json'],
       schemes: process.env.DEBUG ? ['http'] : ['https', 'http'],
+      externalDocs: {
+        url: 'https://github.com/pdf-pigeon/pdf-pigeon',
+        description: 'View Offical Documentation',
+      },
     },
   });
 
