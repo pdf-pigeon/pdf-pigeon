@@ -7,8 +7,6 @@ HTML to PDF in under 2 seconds
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/pdf-pigeon/pdf-pigeon/main/image-bird.yaml
-
-kubectl apply -f https://raw.githubusercontent.com/pdf-pigeon/ipdf-pigeon/main/image-bird-ingress.yaml
 ```
 
 ## Contributing
