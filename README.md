@@ -3,7 +3,7 @@ HTML to PDF in under 2 seconds
 
 ![](/images/screenshot.png)
 
-## Deployment
+## Run in Kubernetes
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/pdf-pigeon/pdf-pigeon/main/pdf-pigeon.yaml
