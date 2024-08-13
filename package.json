@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.6",
-    "@types/node": "^22.0.2",
+    "@types/node": "^22.2.0",
     "@types/sanitize-html": "^2.11.0",
     "@types/uuid": "^10.0.0",
     "prettier": "^3.3.3",
@@ -34,7 +34,7 @@
     "juice": "^10.0.0",
     "moment": "^2.30.1",
     "mongodb": "^6.8.0",
-    "puppeteer": "^22.15.0",
+    "puppeteer": "^23.0.2",
     "sanitize-html": "^2.13.0",
     "sharp": "^0.33.4",
     "uuid": "^10.0.0"
