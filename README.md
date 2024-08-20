@@ -26,6 +26,8 @@ cd pdf-pigeon
 npm install
 
 npm run dev
+
+# open http://localhost:8080 in your browser
 ```
 
 ## Run in Kubernetes
