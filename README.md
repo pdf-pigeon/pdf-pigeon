@@ -16,7 +16,7 @@ curl -X 'POST' \
 }' -o output.pdf
 ```
 
-## Run in Locally
+## Run Locally
 
 ```bash
 git clone https://github.com/pdf-pigeon/pdf-pigeon.git
