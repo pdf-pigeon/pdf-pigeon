@@ -24,12 +24,12 @@ async function handle(request: any, reply: FastifyReply): Promise<void> {
   );
 
   try {
-    const buffer: Buffer = await page.screenshot({
+    const buffer: Uint8Array = await page.screenshot({
       fullPage: true,
       type: 'png',
     });
 
-    reply.status(200).header('Content-Type', 'application/pdf').send(buffer);
+    reply.status(200).header('Content-Type', 'image/png').send(buffer);
   } finally {
     await page.close();
   }

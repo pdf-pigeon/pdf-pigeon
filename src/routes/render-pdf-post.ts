@@ -23,7 +23,7 @@ async function handle(request: any, reply: FastifyReply): Promise<void> {
   );
 
   try {
-    const buffer: Buffer = await page.pdf({
+    const buffer: Uint8Array = await page.pdf({
       displayHeaderFooter:
         request.body.footer || request.body.header ? true : false,
       footerTemplate: request.body.footer || undefined,
